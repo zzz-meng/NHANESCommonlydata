@@ -4,7 +4,7 @@ options(stringsAsFactors = F)
 rm(list =ls())
 
 #设置路径（修改成本次paper路径）
-setwd("C:/Users/zzz/Documents/BaiduSyncdisk/research/")
+setwd("C:/Users/Documents")
 
 
 # 下载 blood pressure,diabetes1999-2023数据------------
@@ -14,7 +14,7 @@ library(httr)
 library(xml2)
 
 # 设置下载文件夹路径
-download_folder <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/bpdi1999-2023"
+download_folder <- "C:/Users/Documents"
 
 # 确保下载文件夹存在
 if (!dir.exists(download_folder)) {
@@ -102,7 +102,7 @@ library(haven)
 library(dplyr)
 library(purrr)
 # 设置文件路径
-path <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/bpdi1999-2023"
+path <- "C:/Users/Documents"
 # 需要下载的 XPT 文件名列表
 health_files <- c("BPQ.xpt","BPQ_B.xpt","BPQ_C.xpt","BPQ_D.xpt","BPQ_E.xpt","BPQ_F.xpt",
                   "BPQ_G.xpt","BPQ_H.xpt","BPQ_I.xpt","BPQ_J.xpt","P_BPQ.xpt","BPQ_L.xpt",
@@ -165,3 +165,4 @@ DI_noclear <- DI_noclear %>%
 # 导出为CSV文件
 write.csv(BP_noclear, "BP_noclear.csv", row.names = FALSE)
 write.csv(DI_noclear, "DI_noclear.csv", row.names = FALSE)
+

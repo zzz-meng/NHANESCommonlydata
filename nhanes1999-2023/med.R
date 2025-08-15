@@ -4,7 +4,7 @@ options(stringsAsFactors = F)
 rm(list =ls())
 
 #设置路径（修改成本次paper路径）
-setwd("C:/Users/zzz/Documents/BaiduSyncdisk/research/")
+setwd("C:/Users/Documents")
 
 
 # 下载Question数据(1999-2023)------------------
@@ -14,7 +14,7 @@ library(httr)
 library(xml2)
 
 # 设置下载文件夹路径
-download_folder <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/med1999-2023"
+download_folder <- "C:/Users/Documents"
 
 # 确保下载文件夹存在
 if (!dir.exists(download_folder)) {
@@ -100,7 +100,7 @@ library(haven)
 library(dplyr)
 library(purrr)
 # 设置文件路径
-path <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/med1999-2023"
+path <- "C:/Users/Documents"
 
 # 需要下载的 XPT 文件名列表
 med_files <- c("MCQ.xpt","MCQ_B.xpt","MCQ_C.xpt","MCQ_D.xpt","MCQ_E.xpt","MCQ_F.xpt",
@@ -157,3 +157,4 @@ all_cancer <- all_cancer %>%
 
 # 使用dplyr::bind_rows直接按行合并(64188)
 all_GI_merged <- dplyr::bind_rows(all_GI, all_cancer)
+

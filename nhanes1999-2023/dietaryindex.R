@@ -4,7 +4,7 @@ options(stringsAsFactors = F)
 rm(list =ls())
 
 #设置路径（修改成本次paper路径）
-setwd("C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/dietaryindex")
+setwd("C:/Users/Documents")
 
 ## 读取数据---------------
 library(haven)
@@ -13,12 +13,12 @@ library(readr)
 library(purrr)
 library(remotes)
 # 从本地文件夹安装
-# remotes::install_local("C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/dietaryindex/dietaryindex-main") 
+# remotes::install_local("C:/Users/Documents") 
 library(dietaryindex)
 
 
 # 设置文件路径
-path <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/dietaryindex"
+path <- "C:/Users/Documents"
 load("NHANES_20052006.rda")## NHANES 2005-2006
 load("NHANES_20072008.rda")## NHANES 2007-2008
 load("NHANES_20092010.rda")## NHANES 2009-2010
@@ -65,3 +65,4 @@ for (cycle in cycles) {
 # 合并所有周期结果
 hei2015_0520 <- do.call(rbind, hei2015_results)
 write.csv(hei2015_0520, "hei2015_0520.csv", row.names = FALSE)
+

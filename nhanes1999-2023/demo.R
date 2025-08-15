@@ -4,7 +4,7 @@ options(stringsAsFactors = F)
 rm(list =ls())
 
 #设置路径（修改成本次paper路径）
-setwd("C:/Users/zzz/Documents/BaiduSyncdisk/research/")
+setwd("C:/Users/Documents")
 
 
 # 下载 demo 数据(1999-2023)------------
@@ -15,7 +15,7 @@ library(xml2)
 install.packages("stringi")
 
 # 设置下载文件夹路径
-download_folder <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/demo1999-2023"
+download_folder <- "C:/Users/Documents"
 
 # 确保下载文件夹存在
 if (!dir.exists(download_folder)) {
@@ -101,7 +101,7 @@ library(haven)
 library(dplyr)
 library(purrr)
 # 设置文件路径
-path <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/demo1999-2023"
+path <- "C:/Users/Documents"
 # 需要下载的 XPT 文件名列表
 demo_files <- c("DEMO.xpt","DEMO_B.xpt","DEMO_C.xpt","DEMO_D.xpt","DEMO_E.xpt","DEMO_F.xpt",
                 "DEMO_G.xpt","DEMO_H.xpt","DEMO_I.xpt","DEMO_J.xpt","P_DEMO.xpt","DEMO_L.xpt")
@@ -167,3 +167,4 @@ all_date_GNRI_del <- all_date_GNRI_del %>%
       TRUE ~ pirnew            # 保留其他值
     )
     )
+

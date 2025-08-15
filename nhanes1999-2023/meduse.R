@@ -4,7 +4,7 @@ options(stringsAsFactors = F)
 rm(list =ls())
 
 #设置路径（修改成本次paper路径）
-setwd("C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/meduse1999-2023")
+setwd("C:/Users/Documents")
 
 
 
@@ -14,7 +14,7 @@ library(rvest)
 library(httr)
 library(xml2)
 # 设置下载文件夹路径
-download_folder <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/meduse1999-2023"
+download_folder <- "C:/Users/Documents"
 
 # 确保下载文件夹存在
 if (!dir.exists(download_folder)) {
@@ -102,7 +102,7 @@ library(haven)
 library(dplyr)
 library(purrr)
 # 设置文件路径
-path <- "C:/Users/zzz/Documents/BaiduSyncdisk/research/NHANES1999-2023/question/meduse1999-2023"
+path <- "C:/Users/Documents"
 
 # 需要下载的 XPT 文件名列表
 meduse_files <- c("RXQ_RX.xpt","RXQ_RX_B.xpt","RXQ_RX_C.xpt","RXQ_RX_D.xpt","RXQ_RX_E.xpt","RXQ_RX_F.xpt",
@@ -157,4 +157,5 @@ meduse_noclean2 <- meduse_noclean1 %>%
   ungroup()
 
 write.csv(meduse_noclean2, "meduse9920.csv", row.names = FALSE)
+
 
